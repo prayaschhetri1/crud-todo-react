@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(255, 255, 255);
+}
+.container {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  padding: 20px 10px;
+  background-color: white;
+  border-radius: 9px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.input-div {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.input-div > input {
+  flex: 1;
+  font-size: 20px;
+  padding: 11px 20px;
+
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.todoItems {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  overflow: auto;
+}
+
+.todoItems > div {
+  padding: 10px 20px 0px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(209, 206, 206);
+  gap: 5px;
+}
+.todoItems > div:hover {
+  background-color: rgb(227, 232, 232);
+}
+.todoItems > div > input {
+  height: 45px;
+  width: 20px;
+}
+
+.todoItems > div > p {
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.delete-btn {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(255, 0, 64);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.heading {
+  text-align: center;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.edit-btn {
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: rgb(9, 9, 175);
+  color: rgb(205, 200, 200);
+  transform: scale(0.96);
+}
+
+.delete-btn:hover {
+  background-color: rgb(190, 12, 33);
+  color: rgb(205, 200, 200);
+  transform: scale(0.96);
+}
+
+.editInput {
+  flex: 1;
+  font-size: 20px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  outline: none;
+  border: 0.5px solid green;
+}
+
+.paginate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  display: none;
+}
+
+.paginate > button {
+  border: none;
+  background-color: blue;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 370px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .heading {
+    background-color: rgb(100, 98, 96);
+    padding: 15px 0;
+    color: rgb(243, 238, 238);
+  }
+  .input-div {
+    padding: 0px 5px;
+  }
+  .input-div > input {
+    font-size: 19px;
+  }
+  .todoItems > div > p {
+    font-size: 17px;
+  }
+  .todoItems > div > input {
+    height: 45px;
+    width: 18px;
+  }
+  .edit-btn {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+  .delete-btn {
+    font-size: 10px;
+    padding: 8px 10px;
+  }
+}
